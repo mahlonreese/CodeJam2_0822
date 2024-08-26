@@ -18,39 +18,43 @@ namespace CodeJam2_0822
             //Console.WriteLine("Guess the random artwork");
 
             // Load an image
-            var image = new CanvasImage("C:\\Users\\jmficde\\source\\repos\\CodeJam2_0822\\CodeJam2_0822\\starryNight.png");
-            image.MaxWidth(20);
 
-            var image2 = new CanvasImage("C:\\Users\\jmficde\\source\\repos\\CodeJam2_0822\\CodeJam2_0822\\americanGothic.png");
-            image2.MaxWidth(20);
+            //Gave image variables meaningful names cooresponding with the name of the painting
+            var starryNight = new CanvasImage("C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\Code Jam Reviews\\Mahlon-Code-Jam\\CodeJam2_0822\\starryNight.png");
+            starryNight.MaxWidth(20);
 
-            var image3 = new CanvasImage("C:\\Users\\jmficde\\source\\repos\\CodeJam2_0822\\CodeJam2_0822\\FridaKahlo.png");
-            image3.MaxWidth(20);
+            var americanGothic = new CanvasImage("C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\Code Jam Reviews\\Mahlon-Code-Jam\\CodeJam2_0822\\americanGothic.png");
+            americanGothic.MaxWidth(20);
 
-            var image4 = new CanvasImage("C:\\Users\\jmficde\\source\\repos\\CodeJam2_0822\\CodeJam2_0822\\UntitledBasquiat.jpg");
-            image4.MaxWidth(20);
+            var fridaKahlo = new CanvasImage("C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\Code Jam Reviews\\Mahlon-Code-Jam\\CodeJam2_0822\\FridaKahlo.png");
+            fridaKahlo.MaxWidth(20);
 
-            var image5 = new CanvasImage("C:\\Users\\jmficde\\source\\repos\\CodeJam2_0822\\CodeJam2_0822\\soupCan.jpg");
-            image5.MaxWidth(20);
+            var untitledBasquiat = new CanvasImage("C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\Code Jam Reviews\\Mahlon-Code-Jam\\CodeJam2_0822\\UntitledBasquiat.jpg");
+            untitledBasquiat.MaxWidth(20);
+
+            var soupCan = new CanvasImage("C:\\Users\\jmffhrf\\OneDrive - JM Family Enterprises\\Documents\\ITS Academy Projects\\Code Jam Reviews\\Mahlon-Code-Jam\\CodeJam2_0822\\soupCan.jpg");
+            soupCan.MaxWidth(20);
 
 
             // Render the image to the console
 
-            Console.WriteLine("Starry Night - Vincent Van Gogh ");
-            AnsiConsole.Write(image);
+            System.Threading.Thread.Sleep(3000); Console.WriteLine("Starry Night - Vincent Van Gogh "); //Used threading to delay printing
+            AnsiConsole.Write(starryNight);
 
-            Console.WriteLine(" \n American Gothic - Grant Wood");
-            AnsiConsole.Write(image2);
+            System.Threading.Thread.Sleep(3000); Console.WriteLine(" \n American Gothic - Grant Wood"); //Used threading to delay printing
+            AnsiConsole.Write(americanGothic);
 
-            Console.WriteLine(" \n Self-Portrait With Thron Necklace and HummingBird - Frida Kahlo");
-            AnsiConsole.Write(image3);
+            System.Threading.Thread.Sleep(3000); Console.WriteLine(" \n Self-Portrait With Thron Necklace and HummingBird - Frida Kahlo"); //Used threading to delay printing
+            AnsiConsole.Write(fridaKahlo);
 
-            Console.WriteLine(" \n Untitled (Fishing) - Jean-Michel Basquiat");
-            AnsiConsole.Write(image4);
+            System.Threading.Thread.Sleep(3000); Console.WriteLine(" \n Untitled (Fishing) - Jean-Michel Basquiat"); //Used threading to delay printing
+            AnsiConsole.Write(untitledBasquiat);
 
-            Console.WriteLine(" \n Large Campbell's Soup Can - Andy Warhol");
-            AnsiConsole.Write(image5);
+            System.Threading.Thread.Sleep(3000); Console.WriteLine(" \n Large Campbell's Soup Can - Andy Warhol"); //Used threading to delay printing
+            AnsiConsole.Write(soupCan);
 
+            endofProgram();
+            
             //while (true) 
             //{
 
@@ -76,6 +80,17 @@ namespace CodeJam2_0822
             //}
 
 
+        }
+       /// Added method that allows user to exit the program and console with a keystroke
+        public static void endofProgram()
+        {
+            Console.WriteLine("Enter q to quit!");
+            char letter = char.Parse(Console.ReadLine());
+            if (letter == 'q')
+            {
+                System.Environment.Exit(0);
+            }
+      
         }
 
 
